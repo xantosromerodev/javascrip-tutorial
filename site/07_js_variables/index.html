@@ -1,0 +1,1074 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../06_js_comments/">
+      
+      
+        <link rel="next" href="../08_js_let/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>JS Variables - Tutorial JavaScript</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="yellow" data-md-color-accent="light-yellow">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Tutorial JavaScript" class="md-header__button md-logo" aria-label="Tutorial JavaScript" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tutorial JavaScript
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              JS Variables
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Tutorial JavaScript" class="md-nav__button md-logo" aria-label="Tutorial JavaScript" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tutorial JavaScript
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_js_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_js_where_to/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Where To
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_js_output/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_js_statements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Statements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_js_syntax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Syntax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_js_comments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Comments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    JS Variables
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    JS Variables
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#las-variables-son-contenedores-para-almacenar-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Las variables son contenedores para almacenar datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Las variables son contenedores para almacenar datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nota-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nota 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nota-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nota 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-utilizar-var-let-o-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cuándo utilizar var, let o const?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-en-el-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como en el álgebra
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identificadores-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identificadores JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-operador-de-asignacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      El operador de asignación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-datos-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de datos JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declarar-una-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declarar una variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#una-declaracion-muchas-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Una declaración, muchas variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valor-indefinido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valor = indefinido
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volver-a-declarar-variables-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volver a declarar variables JavaScript
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Volver a declarar variables JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nota" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nota
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aritmetica-de-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aritmética de JavaScript
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aritmética de JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nota_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nota
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signo-de-dolar-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signo de dólar JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subrayado-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subrayado en JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_js_let/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Let
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#las-variables-son-contenedores-para-almacenar-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Las variables son contenedores para almacenar datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Las variables son contenedores para almacenar datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nota-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nota 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nota-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nota 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-utilizar-var-let-o-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cuándo utilizar var, let o const?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-en-el-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como en el álgebra
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identificadores-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identificadores JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-operador-de-asignacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      El operador de asignación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-datos-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de datos JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declarar-una-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declarar una variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#una-declaracion-muchas-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Una declaración, muchas variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valor-indefinido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valor = indefinido
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volver-a-declarar-variables-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volver a declarar variables JavaScript
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Volver a declarar variables JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nota" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nota
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aritmetica-de-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aritmética de JavaScript
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aritmética de JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nota_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nota
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signo-de-dolar-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signo de dólar JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subrayado-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subrayado en JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1"></h1>
+<h2 id="las-variables-son-contenedores-para-almacenar-datos">Las variables son contenedores para almacenar datos</h2>
+<p>Las variables en JavaScript se pueden declarar de 4 formas:</p>
+<ul>
+<li>Automáticamente</li>
+<li>Usando <code>var</code></li>
+<li>Usando <code>let</code></li>
+<li>Usando <code>const</code></li>
+</ul>
+<p>En este primer ejemplo, <code>x</code>, <code>y</code> y <code>z</code> son variables no declaradas.</p>
+<p>Se declaran automáticamente cuando se utilizan por primera vez.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">x = 5;
+y = 6;
+z = x + y;
+</code></pre>
+<h3 id="nota-1">Nota 1</h3>
+<p>Se considera una buena práctica de programación declarar siempre las variables antes de usarse.</p>
+<p>Del siguiente ejemplo puedes adivinar:</p>
+<ul>
+<li><code>x</code> almacena el valor <code>5</code></li>
+<li><code>y</code> almacena el valor <code>6</code></li>
+<li><code>z</code> almacena el valor <code>11</code></li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">var x = 5;
+var y = 6;
+var z = x + y;
+</code></pre>
+<h3 id="nota-2">Nota 2</h3>
+<p>La palabra clave <code>var</code> se utilizó en todo el código JavaScript desde 1995 hasta 2015.</p>
+<p>Las palabras clave <code>let</code> y <code>const</code> se agregaron a JavaScript en 2015.</p>
+<p>La palabra clave <code>var</code> sólo debe usarse en código escrito para navegadores más antiguos.</p>
+<p><strong>Ejemplo con <code>let</code>:</strong></p>
+<pre><code class="language-js">let x = 5;
+let y = 6;
+let z = x + y;
+</code></pre>
+<p><strong>Ejemplo con <code>const</code>:</strong></p>
+<pre><code class="language-js">const x = 5;
+const y = 6;
+const z = x + y;
+</code></pre>
+<p><strong>Ejemplo mixto:</strong></p>
+<pre><code class="language-js">const price1 = 5;
+const price2 = 6;
+let total = price1 + price2;
+</code></pre>
+<p>Las dos variables <code>price1</code> y <code>price2</code> se declaran con la palabra clave `constv.</p>
+<p>Estos son valores constantes y no se pueden cambiar.</p>
+<p>La variable total se declara con la palabra clave <code>let</code>.</p>
+<p>El valor de la variable <code>total</code> puede cambiar.</p>
+<h3 id="cuando-utilizar-var-let-o-const">¿Cuándo utilizar <code>var</code>, <code>let</code> o <code>const</code>?</h3>
+<ol>
+<li>Siempre declare variables.</li>
+<li>Siempre utilice <code>const</code> si el valor no va cambiar.</li>
+<li>Siempre utilice <code>const</code> si no va cambiar el tipo (matrices y objetos).</li>
+<li>Solo usa <code>let</code> si no puedes usar <code>const</code>.</li>
+<li>Utilice <code>var</code> únicamente si DEBES codificar para navegadores antiguos.</li>
+</ol>
+<h2 id="como-en-el-algebra">Como en el álgebra</h2>
+<p>Al igual que en álgebra, las variables contienen valores:</p>
+<pre><code class="language-js">let x = 5;
+let y = 6;
+</code></pre>
+<p>Al igual que en álgebra, las variables se utilizan en expresiones:</p>
+<pre><code class="language-js">let z = x + y;
+</code></pre>
+<p>A partir del ejemplo anterior, puedes adivinar que el total calculado es 11.</p>
+<blockquote>
+<p><strong>Nota:</strong> Las variables son contenedores para almacenar valores.</p>
+</blockquote>
+<h2 id="identificadores-javascript">Identificadores JavaScript</h2>
+<p>Todas las <strong>variables</strong> de JavaScript deben <strong>identificarse</strong> con <strong>nombres únicos</strong>.</p>
+<p>Estos nombres únicos se denominan <strong>identificadores</strong>.</p>
+<p>Los identificadores pueden ser nombres cortos (como <code>x</code> y <code>y</code>) o nombres más descriptivos (edad, suma, volumenTotal).</p>
+<p>Las reglas generales para crear nombres de variables (identificadores únicos) son:</p>
+<ul>
+<li>Los nombres pueden contener letras, dígitos, guiones bajos y signos de dólar.</li>
+<li>Los nombres deben comenzar con una letra.</li>
+<li>Los nombres también pueden comenzar con $_ (pero no lo usaremos en este tutorial).</li>
+<li>Los nombres distinguen entre mayúsculas y minúsculas (<code>y</code> y <code>Y</code> son variables diferentes).</li>
+<li>Las palabras reservadas (como las palabras clave de JavaScript) no se pueden utilizar como nombres de variables.</li>
+</ul>
+<blockquote>
+<p><strong>Nota:</strong> Los identificadores JavaScript distinguen entre mayúsculas y minúsculas.</p>
+</blockquote>
+<h2 id="el-operador-de-asignacion">El operador de asignación</h2>
+<p>En JavaScript, el signo igual (<code>=</code>) es un operador de "asignación", no un operador "igual a".</p>
+<p>Esto es diferente del álgebra. El siguiente ejemplo no tiene sentido en álgebra:</p>
+<pre><code class="language-js">x = x + 5
+</code></pre>
+<p>Sin embargo, en JavaScript, tiene mucho sentido: asigna el valor de <code>x</code> + <code>5</code>  <code>x</code>.</p>
+<p>(Calcula el valor de <code>x</code> + <code>5</code> y coloca el resultado en <code>x</code>. El valor de <code>x</code> se incrementa en <code>5</code>).</p>
+<blockquote>
+<p><strong>Nota:</strong> El operador "igual a" se escribe así <code>==</code> en JavaScript.</p>
+</blockquote>
+<h2 id="tipos-de-datos-javascript">Tipos de datos JavaScript</h2>
+<p>Las variables de JavaScript pueden contener números y valores de texto.</p>
+<p>En programación, los valores de texto se denominan cadenas de texto.</p>
+<p>JavaScript puede manejar muchos tipos de datos, pero por ahora, sólo piense en números y cadenas de texto.</p>
+<p>Las cadenas se escriben entre comillas dobles o simples. Los números se escriben sin comillas.</p>
+<p>Si pones un número entre comillas, será tratado como una cadena de texto.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">const pi = 3.14;
+let persona = &quot;John Doe&quot;;
+let rpta = 'Si, soy yo';
+</code></pre>
+<h2 id="declarar-una-variable">Declarar una variable</h2>
+<p>Crear una variable en JavaScript se llama "declarar" una variable.</p>
+<p>Declaras una variable JavaScript con la palabra clave <code>var</code> o <code>let</code>:</p>
+<pre><code class="language-js">var carName;
+</code></pre>
+<pre><code class="language-js">let carName;
+</code></pre>
+<p>Después de ser declarado, la variable no tiene valor (técnicamente no está definida).</p>
+<p>Para <strong>asignar</strong> un valor a la variable, use el signo igual:</p>
+<pre><code class="language-js">carName = &quot;Volvo&quot;;
+</code></pre>
+<p>También puedes asignar un valor a la variable cuando la declaras:</p>
+<pre><code class="language-js">let carName = &quot;Volvo&quot;;
+</code></pre>
+<p>En el siguiente ejemplo, creamos una variable llamada <code>carName</code> y le asignamos el valor "Volvo".</p>
+<p>Luego "generamos" el valor dentro de un párrafo HTML con <code>id="demo"</code>:</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+
+&lt;script&gt;
+    let carName = &quot;Volvo&quot;;
+    document.getElementById(&quot;demo&quot;).innerHTML = carName;
+&lt;/script&gt;
+</code></pre>
+<blockquote>
+<p><strong>Nota:</strong> Es una buena práctica de programación declarar todas las variables al comienzo de un script.</p>
+</blockquote>
+<h2 id="una-declaracion-muchas-variables">Una declaración, muchas variables</h2>
+<p>Puedes declarar muchas variables en una sola declaración.</p>
+<p>Comienza la declaración con <code>let</code> y separe las variables con una <strong>coma</strong>.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">let person = &quot;John Doe&quot;, carName = &quot;Volvo&quot;, price = 200;
+</code></pre>
+<p>Una declaración puede abarcar varias líneas:</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">let person = &quot;John Doe&quot;,
+carName = &quot;Volvo&quot;,
+price = 200;
+</code></pre>
+<h2 id="valor-indefinido">Valor = indefinido</h2>
+<p>En los programas de computadora, las variables a menudo se declaran sin valor. El valor puede ser algo que deba calcularse o algo que se proporcionará más adelante, como la entrada del usuario.</p>
+<p>Una variable declarada sin valor tendrá el valor <code>undefined</code>.</p>
+<p>La variable <code>carName</code> tendrá el valor <code>undefined</code> después de la ejecución de esta declaración.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">let carName;
+</code></pre>
+<h2 id="volver-a-declarar-variables-javascript">Volver a declarar variables JavaScript</h2>
+<p>Si vuelves a declarar una variable JavaScript declarada con <code>var</code>, este no perderá su valor.</p>
+<p>La variable <code>carName</code> seguirá teniendo el valor "Volvo" después de la ejecución de estas declaraciones.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">var carName = &quot;Volvo&quot;;
+var carName;
+</code></pre>
+<h3 id="nota">Nota</h3>
+<p>No puedes volver a declarar una variable declarada con let o const.</p>
+<p>Esto no funcionará:👇</p>
+<pre><code class="language-js">let carName = &quot;Volvo&quot;;
+let carName;
+</code></pre>
+<h2 id="aritmetica-de-javascript">Aritmética de JavaScript</h2>
+<p>Al igual que con el álgebra, puedes hacer aritmética con variables de JavaScript, usando operadores como <code>=</code> y <code>+</code>:</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">let x = 5 + 2 + 3;
+</code></pre>
+<p>También puedes agregar cadenas, pero las cadenas estarán concatenadas:</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">let x = &quot;John&quot; + &quot; &quot; + &quot;Doe&quot;;
+</code></pre>
+<p>Prueba también esto:</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">let x = &quot;5&quot; + 2 + 3;
+</code></pre>
+<h3 id="nota_1">Nota</h3>
+<p>Si pone un número entre comillas, el resto de los números se tratarán como cadenas y se concatenarán.</p>
+<p>Ahora prueba esto:</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">let x = 2 + 3 + &quot;5&quot;;
+</code></pre>
+<h2 id="signo-de-dolar-javascript">Signo de dólar JavaScript</h2>
+<p>Dado que JavaScript trata un signo de dólar como una letra, los identificadores que contienen $ son nombres de variables válidos:</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">let $ = &quot;Hola Mundo&quot;;
+let $$$ = 2;
+let $myMoney = 5;
+</code></pre>
+<p>El uso del signo de dólar no es muy común en JavaScript, pero los programadores profesionales suelen utilizarlo como alias para la función principal en una biblioteca de JavaScript.</p>
+<p>En la biblioteca JavaScript jQuery, por ejemplo, la función principal <code>$</code> se utiliza para seleccionar elementos HTML. En jQuery <code>$("p");</code> significa "seleccionar todos los p elementos".</p>
+<h2 id="subrayado-en-javascript">Subrayado en JavaScript</h2>
+<p>Dado que JavaScript trata el guión bajo como una letra, los identificadores que contienen <code>_</code> son nombres de variables válidos:</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">let _lastName = &quot;Johnson&quot;;
+let _x = 2;
+let _100 = 5;
+</code></pre>
+<p>El uso del guión bajo no es muy común en JavaScript, pero una convención entre los programadores profesionales es usarlo como alias para variables "privadas (ocultas)".</p>
+<h2 id="conclusion">Conclusión</h2>
+<p>En JavaScript, las variables almacenan datos y se pueden declarar con <code>var</code>, <code>let</code>, o <code>const</code>. <code>var</code> es obsoleto, mientras que <code>let</code> y <code>const</code> son preferibles. Las variables deben tener identificadores únicos y pueden contener números o cadenas de texto. Es importante declarar variables antes de usarlas y seguir buenas prácticas.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,858 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../04_js_statements/">
+      
+      
+        <link rel="next" href="../06_js_comments/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>JS Syntax - Tutorial JavaScript</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="yellow" data-md-color-accent="light-yellow">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sintaxis-de-javascript" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Tutorial JavaScript" class="md-header__button md-logo" aria-label="Tutorial JavaScript" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tutorial JavaScript
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              JS Syntax
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Tutorial JavaScript" class="md-nav__button md-logo" aria-label="Tutorial JavaScript" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tutorial JavaScript
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_js_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_js_where_to/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Where To
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_js_output/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_js_statements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Statements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    JS Syntax
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    JS Syntax
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#valores-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valores JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#literales-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Literales JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expresiones-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expresiones JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#palabras-clave-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Palabras clave JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comentarios JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identificadores-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identificadores JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-es-case-sensitive" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript es case-sensitive
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-y-camel-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript y Camel Case
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charset-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charset JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_js_comments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Comments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_js_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_js_let/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Let
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#valores-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valores JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#literales-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Literales JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expresiones-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expresiones JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#palabras-clave-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Palabras clave JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comentarios JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identificadores-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identificadores JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-es-case-sensitive" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript es case-sensitive
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-y-camel-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript y Camel Case
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charset-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charset JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="sintaxis-de-javascript">Sintáxis de JavaScript</h1>
+<p>La sintaxis de JavaScript es el conjunto de reglas sobre cómo se construyen los programas en JavaScript.</p>
+<pre><code class="language-js">// Como crear variables:
+var x;
+let y;
+
+// Como usar variables:
+x = 5;
+y = 6;
+let z = x + y;
+</code></pre>
+<h2 id="valores-javascript">Valores JavaScript</h2>
+<p>La sintaxis de JavaScript define dos tipos de valores:</p>
+<ul>
+<li>Valores fijos</li>
+<li>Valores variables</li>
+</ul>
+<p>Los valores fijos se llaman <strong>literales</strong>.</p>
+<p>Los valores de las variables se denominan <strong>variables</strong>.</p>
+<h2 id="literales-javascript">Literales JavaScript</h2>
+<p>Las dos reglas de sintaxis más importantes para valores fijos son.</p>
+<ol>
+<li>Los <strong>números</strong> se escriben con o sin decimales:</li>
+</ol>
+<pre><code class="language-js">10.50
+
+1001
+</code></pre>
+<ol>
+<li>Las <strong>cadenas son texto</strong>, escrito entre comillas dobles o simples:</li>
+</ol>
+<pre><code class="language-js">&quot;John Doe&quot;
+
+'John Doe'
+</code></pre>
+<h2 id="variables-javascript">Variables JavaScript</h2>
+<p>En un lenguaje de programación, las <strong>variables</strong> se utilizan para <strong>almacenar</strong> valores de datos.</p>
+<p>JavaScript utiliza las palabras clave <code>var</code>, <code>let</code> y <code>const</code> para <strong>declarar</strong> variables.</p>
+<p>Se utiliza un <strong>signo igual</strong> para <strong>asignar valores</strong> a las variables.</p>
+<p>En este ejemplo, <code>x</code> se define como una variable. Entonces, a <code>x</code> se le asigna (dado) el valor <code>6</code>:</p>
+<pre><code class="language-js">let x;
+x = 6;
+</code></pre>
+<h2 id="operadores-javascript">Operadores JavaScript</h2>
+<p>JavaScript utiliza <strong>operadores aritméticos</strong> ( + - * / ) para <strong>calcular</strong> valores:</p>
+<pre><code class="language-js">(5 + 6) * 10
+</code></pre>
+<p>JavaScript utiliza un <strong>operador de asignación</strong> ( = ) para <strong>asignar</strong> valores a variables:</p>
+<pre><code class="language-js">let x, y;
+x = 5;
+y = 6;
+</code></pre>
+<h2 id="expresiones-javascript">Expresiones JavaScript</h2>
+<p>Una expresión es una combinación de valores, variables y operadores, que calcula un valor.</p>
+<p>El cálculo se llama evaluación.</p>
+<p>Por ejemplo, 5 * 10 se evalúa como 50:</p>
+<pre><code class="language-js">5 * 10
+</code></pre>
+<p>Las expresiones también pueden contener valores variables:</p>
+<pre><code class="language-js">x * 10
+</code></pre>
+<p>Los valores pueden ser de varios tipos, como números y cadenas.</p>
+<p>Por ejemplo, "John" + " " + "Doe", se evalúa como "John Doe":</p>
+<pre><code class="language-js">&quot;John&quot; + &quot; &quot; + &quot;Doe&quot;
+</code></pre>
+<h2 id="palabras-clave-javascript">Palabras clave JavaScript</h2>
+<p>Las <strong>palabras clave</strong> de JavaScript se utilizan para identificar las acciones que se realizarán.</p>
+<p>La palabra clave <code>let</code> le dice al navegador que cree variables:</p>
+<pre><code class="language-js">let x, y;
+x = 5 + 6;
+y = x * 10;
+</code></pre>
+<p>La palabra clave <code>var</code> también le dice al navegador que cree variables:</p>
+<pre><code class="language-js">var x, y;
+x = 5 + 6;
+y = x * 10;
+</code></pre>
+<blockquote>
+<p>En estos ejemplos, usar <code>var</code> o <code>let</code> producirá el mismo resultado. Aprenderás más sobre <code>var</code> y <code>let</code> más adelante en este tutorial.</p>
+</blockquote>
+<h2 id="comentarios-javascript">Comentarios JavaScript</h2>
+<p>No todas las declaraciones de JavaScript se "ejecutan".</p>
+<p>El código después de las barras dobles // o entre /<em> y </em>/ se tratan como un <strong>comentario</strong>.</p>
+<p>Los comentarios se ignoran y no se ejecutarán:</p>
+<pre><code class="language-js">let x = 5;   // Se ejecutará
+
+// x = 6;   No se ejecutará
+</code></pre>
+<blockquote>
+<p>Aprenderás más sobre los comentarios en un capítulo posterior.</p>
+</blockquote>
+<h2 id="identificadores-javascript">Identificadores JavaScript</h2>
+<p>Los identificadores son nombres de JavaScript.</p>
+<p>Los identificadores se utilizan para nombrar variables, palabras clave y funciones.</p>
+<p>Las reglas para los nombres legales son las mismas en la mayoría de los lenguajes de programación.</p>
+<p>Un nombre JavaScript debe comenzar con:</p>
+<ul>
+<li>Una letra (A-Z o a-z)</li>
+<li>Un signo de dólar ($)</li>
+<li>Un guión bajo (_)</li>
+</ul>
+<p>Los caracteres siguientes pueden ser letras, dígitos, guiones bajos o signos de dólar.</p>
+<blockquote>
+<p><strong>Nota</strong>: No se permiten números como primer caracter en los identificadores. De esta forma, JavaScript puede distinguir fácilmente los identificadores de los números.</p>
+</blockquote>
+<h2 id="javascript-es-case-sensitive">JavaScript es case-sensitive</h2>
+<p>Todos los identificadores de JavaScript <strong>distinguen</strong> entre <strong>mayúsculas y minúsculas</strong>.</p>
+<p>Las variables <code>lastName</code> y <code>lastname</code>, son dos variables diferentes:</p>
+<pre><code class="language-js">let lastname, lastName;
+lastName = &quot;Doe&quot;;
+lastname = &quot;Peterson&quot;;
+</code></pre>
+<p>JavaScript no interpreta <strong>LET</strong> o <strong>Let</strong> como la palabra clave <strong>let</strong>.</p>
+<h2 id="javascript-y-camel-case">JavaScript y Camel Case</h2>
+<p>Históricamente, los programadores han utilizado diferentes formas de unir varias palabras en un nombre de variable:</p>
+<p><strong>Guiones:</strong></p>
+<p>first-name, last-name, master-card, inter-city</p>
+<blockquote>
+<p>Los guiones no están permitidos en JavaScript. Están reservados para operaciones de resta.</p>
+</blockquote>
+<p><strong>Guiones bajo:</strong></p>
+<p>first_name, last_name, master_card, inter_city</p>
+<p><strong>Mayúsculas Camel Case:</strong></p>
+<p>FirstName, LastName, MasterCard, InterCity</p>
+<p><strong>Minúsculas Camel Case:</strong></p>
+<p>Los programadores de JavaScript tienden a utilizar mayúsculas y minúsculas que comienzan con una letra minúscula:</p>
+<p>firstName, lastName, masterCard, interCity</p>
+<h2 id="charset-javascript">Charset JavaScript</h2>
+<p>JavaScript utiliza el conjunto de caracteres Unicode.</p>
+<p>Unicode cubre (casi) todos los caracteres, puntuaciones y símbolos del mundo.</p>
+<p>Para saber más, visita el artículo <a href="https://www.w3schools.com/charsets/ref_html_utf8.asp">Complete Unicode Rerefence</a>.</p>
+<h2 id="conclusion">Conclusión</h2>
+<p>Aprendimos la sintáxis de JavaScript, cómo declarar y usar las variables, los tipos de valores literales y variables, y el uso de operadores y expresiones. También aprendimos el uso de las palabras clave <code>var</code>, <code>let</code>, y <code>const</code>, así como el manejo de los comentarios, identificadores y case-sensitive.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

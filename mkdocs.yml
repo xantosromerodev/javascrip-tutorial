@@ -1,0 +1,20 @@
+site_name: Tutorial JavaScript
+# site_url: https://xantosromero.dev/javascript
+theme:
+  name: 'material'
+  palette:
+    primary: yellow
+    accent: light yellow
+    locale: es
+
+nav:
+  - JS Home: index.md
+  - JS Introduction: 01_js_intro.md
+  - JS Where To: 02_js_where_to.md
+  - JS Output: 03_js_output.md
+  - JS Statements: 04_js_statements.md
+  - JS Syntax: 05_js_syntax.md
+  - JS Comments: 06_js_comments.md
+  - JS Variables: 07_js_variables.md
+  - JS Let: 08_js_let.md
+
