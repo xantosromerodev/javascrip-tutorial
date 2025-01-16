@@ -420,6 +420,87 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#no-se-puede-re-declarar" class="md-nav__link">
+    <span class="md-ellipsis">
+      No se puede re-declarar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redeclarando-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redeclarando variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diferencias-entre-var-let-y-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diferencias entre var, let y const
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cual-es-mejor" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cuál es mejor?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cual-no-es-bueno" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cuál no es bueno?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soporte-con-el-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soporte con el navegador
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redeclarando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redeclarando
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#let-hoisting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let Hoisting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -472,6 +553,87 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#no-se-puede-re-declarar" class="md-nav__link">
+    <span class="md-ellipsis">
+      No se puede re-declarar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redeclarando-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redeclarando variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diferencias-entre-var-let-y-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diferencias entre var, let y const
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cual-es-mejor" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cuál es mejor?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cual-no-es-bueno" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cuál no es bueno?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soporte-con-el-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soporte con el navegador
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redeclarando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redeclarando
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#let-hoisting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let Hoisting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -505,6 +667,181 @@
 // x NO puede ser usado aquí
 </code></pre>
 <h2 id="alcance-global">Alcance global</h2>
+<p>Las variables declaradas con la palabra clave <code>var</code> siempre tienen un <strong>alcance global</strong>.</p>
+<p>Las variables declaradas con la palabra clave <code>var</code> NO pueden tener alcance de bloque.</p>
+<p><strong>Ejemplo:</strong></p>
+<p>Las variables declaradas con <code>var</code> dentro de un bloque <code>{ }</code> pueden ser accedidas desde fuera del bloque.</p>
+<pre><code class="language-js">{
+  var x = 2;
+}
+// x SI se puede usar aquí
+</code></pre>
+<h2 id="no-se-puede-re-declarar">No se puede re-declarar</h2>
+<p>Las variables definidas con <code>let</code> no se pueden redeclarar.</p>
+<p>No puedes redeclarar accidentalmente una variable declarada con <code>let</code>.</p>
+<p>Con <code>let</code> <strong>no puedes hacer</strong> esto:</p>
+<pre><code class="language-js">let x = &quot;John Doe&quot;;
+
+let x = 0;
+</code></pre>
+<p>Las variables definidas con <code>var</code> <strong>pueden</strong> volver a declararse.</p>
+<p>Con <code>var</code> <strong>sí puedes</strong> hacer esto:</p>
+<pre><code class="language-js">var x = &quot;John Doe&quot;;
+
+var x = 0;
+</code></pre>
+<h2 id="redeclarando-variables">Redeclarando variables</h2>
+<p>Redeclarar una variable utilizando la palabra clave <code>var</code> puede causar problemas.</p>
+<p>Redeclarar una variable dentro de un bloque también redeclarará la variable fuera del bloque.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">var x = 10;
+// Aquí x es 10
+
+{
+var x = 2;
+// Aquí x es 2
+}
+
+// Aquí x es 2
+</code></pre>
+<p>Redeclarar una variable utilizando la palabra clave <code>let</code> puede solucionar este problema.</p>
+<p>Redeclarar una variable dentro de un bloque no redeclarará la variable fuera del bloque.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">let x = 10;
+// Aquí x es 10
+
+{
+let x = 2;
+// Aquí x es 2
+}
+
+// Aquí x es 10
+</code></pre>
+<h2 id="diferencias-entre-var-let-y-const">Diferencias entre <code>var</code>, <code>let</code> y <code>const</code></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Alcance</th>
+<th>Redeclarar</th>
+<th>Reasignar</th>
+<th>Hoisting</th>
+<th>Enlazar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>var</code></td>
+<td>No</td>
+<td>Si</td>
+<td>Si</td>
+<td>Si</td>
+<td>Si</td>
+</tr>
+<tr>
+<td><code>let</code></td>
+<td>Si</td>
+<td>No</td>
+<td>Si</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>const</code></td>
+<td>Si</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cual-es-mejor">¿Cuál es mejor?</h2>
+<p><code>let</code> y <code>const</code> tienen <strong>alcance de bloque</strong>.</p>
+<p><code>let</code> y <code>const</code> no se pueden <strong>redeclarar</strong>.</p>
+<p><code>let</code> y <code>const</code> deben ser <strong>declarados</strong> antes de su uso.</p>
+<p><code>let</code> y <code>const</code> no se <strong>enlazan</strong> a <code>this</code>.</p>
+<p><code>let</code> y <code>const</code> no son <strong>elevados</strong> (hoisted).</p>
+<h2 id="cual-no-es-bueno">¿Cuál no es bueno?</h2>
+<p><code>var</code> no tiene que ser declarada.</p>
+<p><code>var</code> es elevada (hoisted).</p>
+<p><code>var</code> se enlaza a <code>this</code>.</p>
+<h2 id="soporte-con-el-navegador">Soporte con el navegador</h2>
+<p>Las palabras clave <code>let</code> y <code>const</code> no son compatibles con Internet Explorer 11 o versiones anteriores.</p>
+<p>La siguiente tabla define las primeras versiones de los navegadores con soporte completo:</p>
+<table>
+<thead>
+<tr>
+<th>Chrome 49</th>
+<th>Edge 12</th>
+<th>Firefox 36</th>
+<th>Safari 11</th>
+<th>Opera 36</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mar, 2016</td>
+<td>Jul, 2015</td>
+<td>Jan, 2015</td>
+<td>Sep, 2017</td>
+<td>Mar, 2016</td>
+</tr>
+</tbody>
+</table>
+<h2 id="redeclarando">Redeclarando</h2>
+<p>Redeclarar una variable de JavaScript con <code>var</code> está permitido en cualquier parte de un programa.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">var x = 2;
+// Ahora x es 2
+
+var x = 3;
+// Ahora x es 3
+</code></pre>
+<p>Con <code>let</code>, no se permite redeclarar una variable en el mismo bloque.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">var x = 2;   // Permitido
+let x = 3;   // No permitido
+
+{
+let x = 2;   // Permitido
+let x = 3;   // No permitido
+}
+
+{
+let x = 2;   // Permitido
+var x = 3;   // No permitido
+}
+</code></pre>
+<p>Redeclarar una variable con <code>let</code> en otro bloque SÍ está permitido.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">let x = 2;   // Permitido
+
+{
+let x = 3;   // Permitido
+}
+
+{
+let x = 4;    // Permitido
+}
+</code></pre>
+<h2 id="let-hoisting">Let Hoisting</h2>
+<p>Las variables definidas con <code>var</code> son elevadas (hoisted) al principio y pueden ser inicializadas en cualquier momento.</p>
+<p>Esto significa que puedes usar la variable antes de que sea declarada.</p>
+<p><strong>Ejemplo:</strong>
+Esto está bien.</p>
+<pre><code class="language-js">carName = &quot;Volvo&quot;;
+var carName;
+</code></pre>
+<p>Si deseas aprender más sobre hoisting, estudia el capítulo sobre <a href="https://www.w3schools.com/js/js_hoisting.asp">Hoisting en JavaScript</a>.</p>
+<p>Las variables definidas con <code>let</code> también son elevadas (hoisted) al principio del bloque, pero no se inicializan.</p>
+<p>Esto significa que usar una variable <code>let</code> antes de ser declarada resultará en un <code>ReferenceError</code>.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">carName = &quot;Saab&quot;;
+let carName = &quot;Volvo&quot;;
+</code></pre>
+<h2 id="conclusion">Conclusión</h2>
+<p>En este capítulo, hemos explorado el uso de la declaración <code>let</code> en JavaScript. A diferencia de <code>var</code>, <code>let</code> permite declarar variables con un alcance de bloque, lo que ayuda a evitar errores comunes relacionados con el alcance de las variables. También hemos visto que las variables declaradas con <code>let</code> no pueden ser redeclaradas en el mismo ámbito y que intentar usar una variable <code>let</code> antes de su declaración resultará en un <code>ReferenceError</code>. Estos comportamientos hacen que <code>let</code> sea una opción más segura y predecible para declarar variables en JavaScript.</p>
 
 
 
