@@ -1,1 +1,1 @@
-echo "site/"
+echo "site/" >> .gitignore
